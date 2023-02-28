@@ -1,0 +1,31 @@
+
+
+<div class="toolbar" role="banner">
+    <img
+      width="60"
+      alt="Angular Logo"
+      src="https://www.bing.com/th?id=OIP.sOEyPNOAE-9rT2oISMD0twHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+    />
+    <span>Welcome</span>
+      <div class="spacer"></div>
+      
+
+ <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
+      <input 
+        name="username"
+        [(ngModel)]="model.username"
+        class="form-control me-2" 
+        type="text" 
+        placeholder="Username">
+      <input 
+        name="password"
+        [(ngModel)]="model.password"
+        class="form-control me-2" 
+        type="password" 
+        placeholder="Password">
+      <button class="btn btn-secondary"  type="submit">Login</button>
+    </form>
+
+
+</div>
+
