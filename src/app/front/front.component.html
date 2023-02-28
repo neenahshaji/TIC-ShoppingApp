@@ -1,0 +1,27 @@
+
+<app-top></app-top>
+
+<div *ngIf="!registerMode" class="bg-dark text-secondary px-4 py-5 text-center" style="text-align:center ;">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Let's Shop</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">Whether it is apparel, accessories, or electronics, we now have cool online shopping apps  to purchase the 
+                             trendy picks on our shopping list.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2" routerLink="/register">Sign-up</button>
+          
+          <button type="button" class="btn btn-outline-light btn-lg px-10">Learn more</button>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="registerMode" class="container">
+      <div class="row justify-content-center">
+          <div class="col-4">
+              <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+          </div>
+      </div>
+  </div>
+  </div>
