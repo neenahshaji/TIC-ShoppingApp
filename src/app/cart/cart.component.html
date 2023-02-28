@@ -1,0 +1,50 @@
+
+
+<h3>Cart Details</h3><br><hr>
+<table class="table ">
+  <tr>
+    <th>&nbsp;</th>
+    <th>Name</th>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total Price</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <th><img src="{{product.photoUrl}}" width="200px"></th>
+    <td> {{product.productName}}</td>
+    <td>{{product.brand}}</td>
+    <td>{{product.price}}</td>
+    <td><input type="number" [(ngModel)]="product.quantity" size="10" id="quantity"/></td>
+    <td>{{product.price * product.quantity}}</td>
+    <td><input type="button" (click)="removeFromCart(product)" id="remove" value="Remove"/></td>
+    <!-- <td><input class="btn btn-secondary" type="button" (click)="removeFromCart(product)" id="remove" placeholder="Remove"/></td>-->
+    <!-- <td><button class="btn btn-secondary "  id="remove" (click)="removeFromCart(product)" value="Remove"> </button><br/></td>  -->
+  
+  </tr>
+  <tr>
+    
+  </tr>  
+</table>
+<br><br>
+
+<hr>
+
+<tr>
+  <th colspan="4">Total Amount to pay $</th>
+  <td >&nbsp;</td>
+    <td colspan="4">{{getTotalValue()}}</td>
+    <td>&nbsp;</td>
+  
+  <td>&nbsp;</td>
+  <td><button class="btn btn-secondary "  id="checkout" (click)="placeOrder(products)">Place Order </button><br/></td>
+  <td>&nbsp;</td>
+  <td><button class="btn btn-secondary " routerLink="/products">Back to items</button><br/></td>
+  
+  
+</tr>
+
+<table>
+  <tr></tr>
+</table>
