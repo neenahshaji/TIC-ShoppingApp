@@ -1,0 +1,22 @@
+<div class="card mb-4" *ngIf="product" style="min-height: 75%;max-height: 80%;">
+    <div class="card-img-wrapper"><br>
+        <img src="{{product.photoUrl}}" alt="{{product.brand}}" class="card-img-top"><br><br>
+    </div>
+    <div class="card-body p-1">
+        <h6 class="card-title text-center mb-1">
+            <i></i>
+             ${{product.price}}
+        </h6>
+        <p class="card-text text-muted text-center">
+            {{product.brand}}
+            <br>
+            <button class="btn btn-secondary " (click)="addToCart(product)" routerLink="/cart"> Add to Cart</button>
+            
+        </p>
+        
+    </div>
+</div>
+
+
+
+
